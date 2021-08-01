@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="textBox1.Text" xml:space="preserve">
+    <value>椎间盘突出
+久坐时，背部不管向前弓还是向后仰，都会让脊柱上的肌肉和韧带发生劳损，导致椎间盘老化。到一定程度后，就可能引发椎间盘突出。
+
+功能障碍
+久坐使全身重量都压在脊椎骨底端，压力承受面分配不均，会引起背部和腹部肌肉下垂，肌肉功能受到影响，致使肌肉松弛、衰弱。由于局部血液流量减少，肌肉供氧量不足，还会引起肌肉僵硬、酸痛，甚至萎缩。此外，长期久坐还会压迫坐骨神经，引起肢体麻木、疼痛。
+
+脾胃不和
+中医里有“久坐伤肉”的说法，坐着不动，会影响人的脾胃消化功能，脾胃主四肢和肌肉，时间久了会导致肌肉退化。
+
+胃肠道
+久坐使结肠蠕动减弱，大便在结肠中停留时间延长，致癌因子与结肠粘膜接触时间也相对延长，从而易患结肠癌。此外，防止疾病和癌产生的人体免疫细胞的数量，也是随着活动量的增加而增加的，久坐会妨碍免疫细胞的生成。
+
+心血管
+由于身体对心脏工作量的需求减少，可能导致心肌衰弱、心脏功能减退、血液循环变慢，从而引起高血压症，并为冠状动脉栓塞埋下病根。
+
+肺栓塞
+久坐最大的危害就是导致下肢静脉血栓。每天坐8小时，其中连续3小时不动，就很危险。连续坐12个小时以上，患肺栓塞的风险会大大增加，尤其身体不好的老人最易中招。
+
+痔疮
+久坐不知不觉地对血液循环产生影响，主要是使静脉回流受阻，引起直肠肛管及阴囊部的静脉扩张，导致血液瘀滞，瘀滞的血液引起静脉曲张，就形成了痔疮。于是“十人九痔”的俗语在今天这个车轮滚滚的年代里一次又一次被印证。
+
+前列腺炎
+久坐会造成前列腺局部充血，使前列腺液排出受阻，而成为慢性前列腺炎发病的主要诱因之一。如果经常吃辛辣食物，嗜好烟酒，平时再喝水少，不吃蔬菜、水果，还经常憋尿，更容易诱发前列腺炎。
+
+脾胃不和
+中医里有“久坐伤肉”的说法，中国中医科学院西苑医院老年医学研究所研究员张国玺解释，坐着不动，会影响人的脾胃消化功能，脾胃主四肢和肌肉，时间久了会导致肌肉退化。
+
+性功能
+据医学研究发现，习惯久坐的男人发生勃起障碍是勤于运动的男人的2倍。中医认为“久坐伤肉”。久坐缺乏经常性的体育运动，造成男性阴部冲血，引发前列腺发炎。特别是坐在软沙发上，臀部深陷其中，阴囊受挤压，使静脉回流不畅，阴部血液的微循环受阻，严重时可导致精索静脉曲张，睾丸下坠、下腹部钝痛。而且久坐让睾丸新陈代谢产生的有害物质排泄不畅，使睾酮分泌减少，导致性功能障碍和男性不育症，甚至于发生睾丸坏死。
+
+臀部疖肿
+久坐使臀部长期受压，局部血液循环不畅，再加上皮肤不洁净，很容易发生臀部疖肿。
+
+颈腰肌肉
+久坐不动会引起颈椎僵硬，影响椎动脉对头部的供血量的推动，使人体的正常生理弯曲被破坏，失去了体态美感，而出现弓背或骨质增生。久坐还使得整个躯体重量全部压在腰骶部，压力承受面分布不均，会引起腰、腹、背部肌肉下垂、疼痛，脊椎肌肉也因循环欠佳而出现痉挛现象。
+
+心肺功能
+人体对心脏工作量的需求随之减少，血液循环减慢，日久则会使心脏机能衰退，引起心肌萎缩，易患动脉硬化、高血压、冠心病等心血管疾病。
+
+卵巢缺氧
+职场女性常坐于办公桌前久坐不动，一坐就是一天，极易留下健康隐患。据最新研究了解，对职场女性来说，久坐不动会导致“卵巢缺氧”，让卵巢提前早衰，严重伤害女性卵巢健康。
+女性久坐危害大。久坐不动，可引起血液循环不畅，使“卵巢缺氧”，从而导致卵巢早衰，更年期提前出现。要改善这种现状，建议女性每天至少活动30分钟以上。</value>
+  </data>
+</root>
