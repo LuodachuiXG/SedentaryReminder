@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SedentaryReminder.pages;
 using SedentaryReminder.util;
 
 namespace SedentaryReminder
@@ -29,6 +30,13 @@ namespace SedentaryReminder
 
             // 将ComboBox_ReminderMode默认选择项设置为0
             cb_reminderMode.SelectedIndex = 0;
+        }
+
+        private void FormStart_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            FormCloseOrMinimize form = new FormCloseOrMinimize(this);
+            form.ShowDialog();
+            e.Cancel = true;
         }
 
         private void SettingToolStripMenuItem_Click(object sender, EventArgs e)
@@ -111,5 +119,7 @@ namespace SedentaryReminder
         {
             
         }
+
+        
     }
 }

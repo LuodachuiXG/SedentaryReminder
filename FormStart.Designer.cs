@@ -243,6 +243,7 @@ namespace SedentaryReminder
             this.Name = "FormStart";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "久坐提醒";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormStart_FormClosing);
             this.Load += new System.EventHandler(this.FormStart_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage_Main.ResumeLayout(false);

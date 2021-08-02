@@ -91,11 +91,18 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common.cs" />
     <Compile Include="pages\FormAbout.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="pages\FormAbout.Designer.cs">
       <DependentUpon>FormAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pages\FormCloseOrMinimize.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pages\FormCloseOrMinimize.Designer.cs">
+      <DependentUpon>FormCloseOrMinimize.cs</DependentUpon>
     </Compile>
     <Compile Include="pages\FormSettings.cs">
       <SubType>Form</SubType>
@@ -116,6 +123,9 @@
     <Compile Include="util\IniUtil.cs" />
     <EmbeddedResource Include="pages\FormAbout.resx">
       <DependentUpon>FormAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pages\FormCloseOrMinimize.resx">
+      <DependentUpon>FormCloseOrMinimize.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="pages\FormSettings.resx">
       <DependentUpon>FormSettings.cs</DependentUpon>

@@ -10,3 +10,4 @@ D:\Project\winform_project\SedentaryReminder\obj\x64\Debug\SedentaryReminder.exe
 D:\Project\winform_project\SedentaryReminder\obj\x64\Debug\SedentaryReminder.pdb
 D:\Project\winform_project\SedentaryReminder\obj\x64\Debug\SedentaryReminder.csproj.AssemblyReference.cache
 D:\Project\winform_project\SedentaryReminder\obj\x64\Debug\SedentaryReminder.FormSettings.resources
+D:\Project\winform_project\SedentaryReminder\obj\x64\Debug\SedentaryReminder.pages.FormCloseOrMinimize.resources
