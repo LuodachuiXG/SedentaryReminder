@@ -33,7 +33,7 @@ namespace SedentaryReminder
 
         private void SettingToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            new FormSetting().ShowDialog();
+            new FormSettings().ShowDialog();
         }
 
         private void AboutToolStripMenuItem_Click(object sender, EventArgs e)

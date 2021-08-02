@@ -1,0 +1,12 @@
+D:\Project\winform_project\SedentaryReminder\bin\x64\Debug\SedentaryReminder.exe.config
+D:\Project\winform_project\SedentaryReminder\bin\x64\Debug\SedentaryReminder.exe
+D:\Project\winform_project\SedentaryReminder\bin\x64\Debug\SedentaryReminder.pdb
+D:\Project\winform_project\SedentaryReminder\obj\x64\Debug\SedentaryReminder.FormAbout.resources
+D:\Project\winform_project\SedentaryReminder\obj\x64\Debug\SedentaryReminder.FormStart.resources
+D:\Project\winform_project\SedentaryReminder\obj\x64\Debug\SedentaryReminder.Properties.Resources.resources
+D:\Project\winform_project\SedentaryReminder\obj\x64\Debug\SedentaryReminder.csproj.GenerateResource.cache
+D:\Project\winform_project\SedentaryReminder\obj\x64\Debug\SedentaryReminder.csproj.CoreCompileInputs.cache
+D:\Project\winform_project\SedentaryReminder\obj\x64\Debug\SedentaryReminder.exe
+D:\Project\winform_project\SedentaryReminder\obj\x64\Debug\SedentaryReminder.pdb
+D:\Project\winform_project\SedentaryReminder\obj\x64\Debug\SedentaryReminder.csproj.AssemblyReference.cache
+D:\Project\winform_project\SedentaryReminder\obj\x64\Debug\SedentaryReminder.FormSettings.resources

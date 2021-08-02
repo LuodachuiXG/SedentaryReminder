@@ -86,7 +86,7 @@ namespace SedentaryReminder
             // 
             this.label_author.AutoSize = true;
             this.label_author.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label_author.Location = new System.Drawing.Point(458, 84);
+            this.label_author.Location = new System.Drawing.Point(458, 91);
             this.label_author.Name = "label_author";
             this.label_author.Size = new System.Drawing.Size(143, 60);
             this.label_author.TabIndex = 4;

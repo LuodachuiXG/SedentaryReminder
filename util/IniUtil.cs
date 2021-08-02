@@ -3,6 +3,7 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 
 namespace SedentaryReminder.util
 {
@@ -22,10 +23,10 @@ namespace SedentaryReminder.util
             this.path = path;
         }
 
-        /*
-         * 读取ini文件内容。
-         * return：成功返回ini内容，失败返回空字符串。
-         */
+        /// <summary>
+        /// 读取ini文件内容。
+        /// </summary>
+        /// <returns>成功返回ini内容，失败返回空字符串。</returns>
         private string GetIniFile()
         {
             try
@@ -51,13 +52,14 @@ namespace SedentaryReminder.util
             }
         }
 
-        /*
-         * parm1：ini字符串内容。
-         * parm2：节点名。
-         * parm3：返回字符串是否包含节点名。
-         * 根据节点名从ini中找到节点内容。
-         * return：成功返回节点内容，失败返回空字符串。
-         */
+
+        /// <summary>
+        /// 根据节点名从ini中找到节点内容。
+        /// </summary>
+        /// <param name="ini">ini字符串内容</param>
+        /// <param name="node">节点名</param>
+        /// <param name="includeNode">返回字符串是否包含节点名</param>
+        /// <returns>成功返回节点内容，失败返回空字符串</returns>
         private string GetNodeContentByNodeFromIni(string ini, string node, bool includeNode = false)
         {
             // 获取节点首次出现地址
@@ -87,12 +89,12 @@ namespace SedentaryReminder.util
         }
 
 
-        /*
-         * parm1：ini字符串内容。
-         * parm2：节点名。
-         * 根据节点名从ini中找到节点在ini中的起始位置。
-         * return：成功返回索引，失败或节点不存在返回-1。
-         */
+        /// <summary>
+        /// 根据节点名从ini中找到节点在ini中的起始位置
+        /// </summary>
+        /// <param name="ini">ini字符串内容</param>
+        /// <param name="node">节点名</param>
+        /// <returns>成功返回索引，失败或节点不存在返回-1</returns>
         private int GetNodeBeginIndexByNodeFromIni(string ini, string node)
         {
             // 获取节点首次出现地址
@@ -106,12 +108,12 @@ namespace SedentaryReminder.util
             return nodeBeginIndex;
         }
 
-        /*
-         * parm1：ini字符串内容。
-         * parm2：节点名。
-         * 根据节点名从ini中找到节点在ini中的结尾位置。
-         * return：成功返回索引，失败或节点不存在返回-1。
-         */
+        /// <summary>
+        /// 根据节点名从ini中找到节点在ini中的结尾位置
+        /// </summary>
+        /// <param name="ini">ini字符串内容</param>
+        /// <param name="node">节点名</param>
+        /// <returns>成功返回索引，失败或节点不存在返回-1</returns>
         private int GetNodeEndIndexByNodeFromIni(string ini, string node)
         {
             // 获取节点首次出现地址
@@ -132,12 +134,13 @@ namespace SedentaryReminder.util
             return nodeEndIndex;
         }
 
-        /*
-         * parm1：nodeContent节点内容。
-         * parm2：要获取的value绑定的Key。
-         * parm3：返回字符串是否包含Key。
-         * 根据Key从节点内容中找到Value，nodeContent不能包含节点名。
-         */
+        /// <summary>
+        /// 根据Key从节点内容中找到Value，nodeContent不能包含节点名
+        /// </summary>
+        /// <param name="nodeContent">nodeContent节点内容</param>
+        /// <param name="key">要获取的value绑定的Key</param>
+        /// <param name="includeKey">返回字符串是否包含Key</param>
+        /// <returns></returns>
         private string GetValueByKeyFromNodeContent(string nodeContent, string key, bool includeKey = false)
         {
             int keyBeginIndex = nodeContent.IndexOf($"{key}=");
@@ -154,12 +157,12 @@ namespace SedentaryReminder.util
                 nodeContent.Substring(keyBeginIndex + key.Length + 1, valueLength);
         }
 
-        /*
-        * parm1：ini字符串内容。
-        * parm2：节点名。
-        * 根据Key从NodeContent节点内容中找到Key在NodeContent中的起始位置。
-        * return：成功返回索引，失败或节点不存在返回-1。
-        */
+        /// <summary>
+        /// 根据Key从NodeContent节点内容中找到Key在NodeContent中的起始位置
+        /// </summary>
+        /// <param name="nodeContent">ini字符串内容</param>
+        /// <param name="key">节点名</param>
+        /// <returns>成功返回索引，失败或节点不存在返回-1</returns>
         private int GetKeyBeginIndexByKeyFromNodeContent(string nodeContent, string key)
         {
             int keyBeginIndex = nodeContent.IndexOf($"{key}=");
@@ -292,22 +295,69 @@ namespace SedentaryReminder.util
             return WriteString(node, key, value.ToString());
         }
 
-        //public Dictionary<string, Dictionary<string, string>> ReadStrings() {
-        //    string ini = GetIniFile();
-        //    if (ini.Length <= 0)
-        //        return null;
+        public Dictionary<string, Dictionary<string, string>> ReadAllStrings()
+        {
+            string ini = GetIniFile();
+            // 为空返回null
+            if (ini.Length == 0)
+                return null;
 
-        //    string[] inis = ini.Split('\n');
-        //    string currentNodeStr = "";
+            Dictionary<string, Dictionary<string, string>> lists = 
+                new Dictionary<string, Dictionary<string, string>>();
 
-        //    Dictionary<string, string> currentNode = null;
-        //    Dictionary<string, Dictionary<string, string>> lists =
-        //        new Dictionary<string, Dictionary<string, string>>();
+            // 将每行分割出来并创建ArrayList对象，分割的文本最后附带一个\r
+            string[] splitIni = Regex.Split(ini, "\n", RegexOptions.IgnoreCase);
+            ArrayList iniList = new ArrayList(splitIni);
+            
 
+            // 删除空行
+            for (int i = 0; i < iniList.Count; i++)
+            {
+                if (iniList[i].ToString().IndexOf("[") == -1 &&
+                    iniList[i].ToString().IndexOf("]") == -1 &&
+                    iniList[i].ToString().IndexOf("=") == -1)
+                        iniList.RemoveAt(i); 
+                
+            }
 
-        //    int i = 0;
-        //    bool isNode = (inis[i].IndexOf("[") != -1 && inis[i].IndexOf("]") != -1 &&
-        //            inis[i].IndexOf("\r") != -1);
-        //}
+            string currentNode = "";
+            Dictionary<string, string> list = null;
+            for (int i = 0; i < iniList.Count; i++)
+            {
+                string currentLine = iniList[i].ToString();
+                // 判断当前行是否是节点
+                if (!string.IsNullOrEmpty(new Regex(@"(\[).*?(\])[\r]", RegexOptions.IgnoreCase)
+                        .Match(currentLine).Value))
+                {
+                    // 是节点
+                    // 判断list不为null再给lists赋Value，
+                    // 是防止第一次循环第一个节点list还没有new就赋值，导致Null异常
+                    if (list != null)
+                        lists[currentNode] = list;
+
+                    // 获取节点名
+                    currentNode = iniList[i].ToString().Substring(1, currentLine.Length - 3);
+                    lists.Add(currentNode, list);
+                    list = new Dictionary<string, string>();
+
+                    // 如果最后一行是节点的话，就直接把节点名作为key，value设置null添加到lists
+                    if (i == iniList.Count - 1)
+                        lists[currentNode] = list;
+
+                    continue;
+                }
+
+                string keyStr = currentLine.Substring(0, iniList[i].ToString().IndexOf("="));
+                // 读取Value时不能忘了将行尾的\r去掉，这里就是少读取一个字数（-1）即可。
+                string valueStr = currentLine.Substring(keyStr.Length + 1, currentLine.Length - (keyStr.Length + 1) - 1);
+                list.Add(keyStr, valueStr);
+
+                // 如果当前行已经是最后一行并且还不是节点的话，就将list赋值给lists的value，
+                // 因为如果不循环了，就不会在上面的代码给lists的value赋值了。
+                if (i == iniList.Count - 1)
+                    lists[currentNode] = list;
+            }
+            return lists;
+        }
     }
 }

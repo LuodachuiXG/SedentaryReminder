@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SedentaryReminder.util;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,11 +11,16 @@ using System.Windows.Forms;
 
 namespace SedentaryReminder
 {
-    public partial class FormSetting : Form
+    public partial class FormSettings : Form
     {
-        public FormSetting()
+        public FormSettings()
         {
             InitializeComponent();
+        }
+
+        private void FormSettings_Load(object sender, EventArgs e)
+        {
+            this.Icon = Properties.Resources.ico;
         }
     }
 }
