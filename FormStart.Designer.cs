@@ -31,10 +31,11 @@ namespace SedentaryReminder
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage_Main = new System.Windows.Forms.TabPage();
             this.btn_startReminder = new System.Windows.Forms.Button();
-            this.cb_reminderMode = new System.Windows.Forms.ComboBox();
+            this.cbBox_reminderMode = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label_stopReminderTips = new System.Windows.Forms.Label();
             this.tb_stopReminderTime = new System.Windows.Forms.TextBox();
@@ -43,14 +44,27 @@ namespace SedentaryReminder
             this.tb_reminderTime = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage_Running = new System.Windows.Forms.TabPage();
+            this.btn_stopReminder = new System.Windows.Forms.Button();
+            this.label_reminderTime = new System.Windows.Forms.Label();
+            this.tb_reminderTimeInfo = new System.Windows.Forms.TextBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.FuncToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.SettingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.AboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
+            this.notifyIconMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.notifyIconMenu_displayWindow = new System.Windows.Forms.ToolStripMenuItem();
+            this.notifyIconMenu_setting = new System.Windows.Forms.ToolStripMenuItem();
+            this.notifyIconMenu_about = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.notifyIconMenu_finish = new System.Windows.Forms.ToolStripMenuItem();
+            this.timer_sedentaryReminder = new System.Windows.Forms.Timer(this.components);
             this.tabControl1.SuspendLayout();
             this.tabPage_Main.SuspendLayout();
+            this.tabPage_Running.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            this.notifyIconMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -68,7 +82,7 @@ namespace SedentaryReminder
             // 
             this.tabPage_Main.BackColor = System.Drawing.SystemColors.Control;
             this.tabPage_Main.Controls.Add(this.btn_startReminder);
-            this.tabPage_Main.Controls.Add(this.cb_reminderMode);
+            this.tabPage_Main.Controls.Add(this.cbBox_reminderMode);
             this.tabPage_Main.Controls.Add(this.label3);
             this.tabPage_Main.Controls.Add(this.label_stopReminderTips);
             this.tabPage_Main.Controls.Add(this.tb_stopReminderTime);
@@ -91,22 +105,23 @@ namespace SedentaryReminder
             this.btn_startReminder.TabIndex = 8;
             this.btn_startReminder.Text = "运行久坐提醒";
             this.btn_startReminder.UseVisualStyleBackColor = true;
+            this.btn_startReminder.Click += new System.EventHandler(this.btn_startReminder_Click);
             // 
-            // cb_reminderMode
+            // cbBox_reminderMode
             // 
-            this.cb_reminderMode.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cb_reminderMode.FormattingEnabled = true;
-            this.cb_reminderMode.Items.AddRange(new object[] {
+            this.cbBox_reminderMode.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbBox_reminderMode.FormattingEnabled = true;
+            this.cbBox_reminderMode.Items.AddRange(new object[] {
             "右下角弹窗",
             "左下角弹窗",
             "右上角弹窗",
             "左上角弹窗",
             "居中弹窗"});
-            this.cb_reminderMode.Location = new System.Drawing.Point(133, 70);
-            this.cb_reminderMode.Name = "cb_reminderMode";
-            this.cb_reminderMode.Size = new System.Drawing.Size(122, 20);
-            this.cb_reminderMode.TabIndex = 7;
-            this.cb_reminderMode.SelectedValueChanged += new System.EventHandler(this.cb_reminderMode_SelectedValueChanged);
+            this.cbBox_reminderMode.Location = new System.Drawing.Point(133, 70);
+            this.cbBox_reminderMode.Name = "cbBox_reminderMode";
+            this.cbBox_reminderMode.Size = new System.Drawing.Size(122, 20);
+            this.cbBox_reminderMode.TabIndex = 7;
+            this.cbBox_reminderMode.SelectedIndexChanged += new System.EventHandler(this.cbBox_reminderMode_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -136,16 +151,17 @@ namespace SedentaryReminder
             this.tb_stopReminderTime.TabIndex = 4;
             this.tb_stopReminderTime.Text = "5";
             this.tb_stopReminderTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tb_stopReminderTime.TextChanged += new System.EventHandler(this.tb_stopReminderTime_TextChanged);
             this.tb_stopReminderTime.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_stopReminderTime_KeyPress);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(66, 45);
+            this.label4.Location = new System.Drawing.Point(55, 45);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(65, 12);
+            this.label4.Size = new System.Drawing.Size(77, 12);
             this.label4.TabIndex = 3;
-            this.label4.Text = "鼠标不动：";
+            this.label4.Text = "鼠标无操作：";
             // 
             // label2
             // 
@@ -164,6 +180,7 @@ namespace SedentaryReminder
             this.tb_reminderTime.TabIndex = 1;
             this.tb_reminderTime.Text = "60";
             this.tb_reminderTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tb_reminderTime.TextChanged += new System.EventHandler(this.tb_reminderTime_TextChanged);
             this.tb_reminderTime.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_textBox_reminderTime_KeyPress);
             // 
             // label1
@@ -178,12 +195,45 @@ namespace SedentaryReminder
             // tabPage_Running
             // 
             this.tabPage_Running.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage_Running.Controls.Add(this.btn_stopReminder);
+            this.tabPage_Running.Controls.Add(this.label_reminderTime);
+            this.tabPage_Running.Controls.Add(this.tb_reminderTimeInfo);
             this.tabPage_Running.Location = new System.Drawing.Point(4, 22);
             this.tabPage_Running.Name = "tabPage_Running";
             this.tabPage_Running.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage_Running.Size = new System.Drawing.Size(377, 149);
             this.tabPage_Running.TabIndex = 1;
             this.tabPage_Running.Text = "Running";
+            // 
+            // btn_stopReminder
+            // 
+            this.btn_stopReminder.Location = new System.Drawing.Point(133, 108);
+            this.btn_stopReminder.Name = "btn_stopReminder";
+            this.btn_stopReminder.Size = new System.Drawing.Size(122, 24);
+            this.btn_stopReminder.TabIndex = 9;
+            this.btn_stopReminder.Text = "停止久坐提醒";
+            this.btn_stopReminder.UseVisualStyleBackColor = true;
+            this.btn_stopReminder.Click += new System.EventHandler(this.btn_stopReminder_Click);
+            // 
+            // label_reminderTime
+            // 
+            this.label_reminderTime.Location = new System.Drawing.Point(8, 10);
+            this.label_reminderTime.Name = "label_reminderTime";
+            this.label_reminderTime.Size = new System.Drawing.Size(357, 16);
+            this.label_reminderTime.TabIndex = 1;
+            this.label_reminderTime.Text = "久坐提醒时间：0分钟 | 鼠标无操作停止久坐记录：0分钟";
+            this.label_reminderTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // tb_reminderTimeInfo
+            // 
+            this.tb_reminderTimeInfo.Font = new System.Drawing.Font("新宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tb_reminderTimeInfo.Location = new System.Drawing.Point(8, 33);
+            this.tb_reminderTimeInfo.Multiline = true;
+            this.tb_reminderTimeInfo.Name = "tb_reminderTimeInfo";
+            this.tb_reminderTimeInfo.ReadOnly = true;
+            this.tb_reminderTimeInfo.Size = new System.Drawing.Size(357, 69);
+            this.tb_reminderTimeInfo.TabIndex = 0;
+            this.tb_reminderTimeInfo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // menuStrip1
             // 
@@ -230,8 +280,65 @@ namespace SedentaryReminder
             this.AboutToolStripMenuItem.Text = "关于(&A)";
             this.AboutToolStripMenuItem.Click += new System.EventHandler(this.AboutToolStripMenuItem_Click);
             // 
+            // notifyIcon
+            // 
+            this.notifyIcon.ContextMenuStrip = this.notifyIconMenu;
+            this.notifyIcon.Text = "久坐提醒";
+            this.notifyIcon.Visible = true;
+            this.notifyIcon.MouseClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon_MouseClick);
+            // 
+            // notifyIconMenu
+            // 
+            this.notifyIconMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.notifyIconMenu_displayWindow,
+            this.notifyIconMenu_setting,
+            this.notifyIconMenu_about,
+            this.toolStripSeparator2,
+            this.notifyIconMenu_finish});
+            this.notifyIconMenu.Name = "notifyIconMenu";
+            this.notifyIconMenu.Size = new System.Drawing.Size(141, 98);
+            // 
+            // notifyIconMenu_displayWindow
+            // 
+            this.notifyIconMenu_displayWindow.Name = "notifyIconMenu_displayWindow";
+            this.notifyIconMenu_displayWindow.Size = new System.Drawing.Size(140, 22);
+            this.notifyIconMenu_displayWindow.Text = "显示程序(&V)";
+            this.notifyIconMenu_displayWindow.Click += new System.EventHandler(this.notifyIconMenu_displayWindow_Click);
+            // 
+            // notifyIconMenu_setting
+            // 
+            this.notifyIconMenu_setting.Name = "notifyIconMenu_setting";
+            this.notifyIconMenu_setting.Size = new System.Drawing.Size(140, 22);
+            this.notifyIconMenu_setting.Text = "设置(&S)";
+            this.notifyIconMenu_setting.Click += new System.EventHandler(this.notifyIconMenu_setting_Click);
+            // 
+            // notifyIconMenu_about
+            // 
+            this.notifyIconMenu_about.Name = "notifyIconMenu_about";
+            this.notifyIconMenu_about.Size = new System.Drawing.Size(140, 22);
+            this.notifyIconMenu_about.Text = "关于(&I)";
+            this.notifyIconMenu_about.Click += new System.EventHandler(this.notifyIconMenu_about_Click);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(137, 6);
+            // 
+            // notifyIconMenu_finish
+            // 
+            this.notifyIconMenu_finish.Name = "notifyIconMenu_finish";
+            this.notifyIconMenu_finish.Size = new System.Drawing.Size(140, 22);
+            this.notifyIconMenu_finish.Text = "关闭软件(&E)";
+            this.notifyIconMenu_finish.Click += new System.EventHandler(this.notifyIconMenu_finish_Click);
+            // 
+            // timer_sedentaryReminder
+            // 
+            this.timer_sedentaryReminder.Interval = 1000;
+            this.timer_sedentaryReminder.Tick += new System.EventHandler(this.timer_sedentaryReminder_Tick);
+            // 
             // FormStart
             // 
+            this.AcceptButton = this.btn_startReminder;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(381, 174);
@@ -248,8 +355,11 @@ namespace SedentaryReminder
             this.tabControl1.ResumeLayout(false);
             this.tabPage_Main.ResumeLayout(false);
             this.tabPage_Main.PerformLayout();
+            this.tabPage_Running.ResumeLayout(false);
+            this.tabPage_Running.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.notifyIconMenu.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -267,13 +377,24 @@ namespace SedentaryReminder
         private System.Windows.Forms.TextBox tb_stopReminderTime;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox cb_reminderMode;
+        private System.Windows.Forms.ComboBox cbBox_reminderMode;
         private System.Windows.Forms.Button btn_startReminder;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem FuncToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem SettingToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem AboutToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.NotifyIcon notifyIcon;
+        private System.Windows.Forms.ContextMenuStrip notifyIconMenu;
+        private System.Windows.Forms.ToolStripMenuItem notifyIconMenu_displayWindow;
+        private System.Windows.Forms.ToolStripMenuItem notifyIconMenu_setting;
+        private System.Windows.Forms.ToolStripMenuItem notifyIconMenu_about;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripMenuItem notifyIconMenu_finish;
+        private System.Windows.Forms.TextBox tb_reminderTimeInfo;
+        private System.Windows.Forms.Label label_reminderTime;
+        private System.Windows.Forms.Button btn_stopReminder;
+        public System.Windows.Forms.Timer timer_sedentaryReminder;
     }
 }
 

@@ -252,6 +252,7 @@ namespace SedentaryReminder
             this.cBox_reminder_windowsShadow.TabIndex = 11;
             this.cBox_reminder_windowsShadow.Text = "窗口阴影";
             this.cBox_reminder_windowsShadow.UseVisualStyleBackColor = true;
+            this.cBox_reminder_windowsShadow.Visible = false;
             this.cBox_reminder_windowsShadow.CheckedChanged += new System.EventHandler(this.cBox_reminder_windowsShadow_CheckedChanged);
             // 
             // cBox_reminder_displayKeyAndTimeTips

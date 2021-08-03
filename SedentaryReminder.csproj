@@ -104,6 +104,12 @@
     <Compile Include="pages\FormCloseOrMinimize.Designer.cs">
       <DependentUpon>FormCloseOrMinimize.cs</DependentUpon>
     </Compile>
+    <Compile Include="pages\FormReminder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pages\FormReminder.Designer.cs">
+      <DependentUpon>FormReminder.cs</DependentUpon>
+    </Compile>
     <Compile Include="pages\FormSettings.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,12 +127,16 @@
     <Compile Include="Settings.cs" />
     <Compile Include="util\HotKeyValue.cs" />
     <Compile Include="util\IniUtil.cs" />
+    <Compile Include="util\Music.cs" />
     <Compile Include="util\Tool.cs" />
     <EmbeddedResource Include="pages\FormAbout.resx">
       <DependentUpon>FormAbout.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="pages\FormCloseOrMinimize.resx">
       <DependentUpon>FormCloseOrMinimize.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pages\FormReminder.resx">
+      <DependentUpon>FormReminder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="pages\FormSettings.resx">
       <DependentUpon>FormSettings.cs</DependentUpon>
