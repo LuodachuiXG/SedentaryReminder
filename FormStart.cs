@@ -14,6 +14,8 @@ namespace SedentaryReminder
 {
     public partial class FormStart : Form
     {
+        private IniUtil ini = Common.iniSetting;
+
         public FormStart()
         {
             InitializeComponent();
@@ -34,6 +36,23 @@ namespace SedentaryReminder
 
         private void FormStart_FormClosing(object sender, FormClosingEventArgs e)
         {
+            string rememberChoice = ini.ReadString(Common.NODE_END, Common.END_REMEMBER_CHOICE, "N");
+            string minimize = ini.ReadString(Common.NODE_END, Common.END_MINIMIZE, "N");
+            string finish = ini.ReadString(Common.NODE_END, Common.END_FINISH, "N");
+            
+            // 记住选择和结束程序为Y，直接结束本程序进程
+            if (rememberChoice.Equals("Y") && finish.Equals("Y"))
+                System.Environment.Exit(0);
+            //记住选择和最小化为Y，最小化本窗
+            if (rememberChoice.Equals("Y") && minimize.Equals("Y"))
+            {
+                this.WindowState = FormWindowState.Minimized;
+                e.Cancel = true;
+                return;
+            }
+
+            // 如果上面两个条件都不满足，就打开FormCloseOrMinimize窗-
+            // 让用户选择关闭还是最小化
             FormCloseOrMinimize form = new FormCloseOrMinimize(this);
             form.ShowDialog();
             e.Cancel = true;

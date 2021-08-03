@@ -9,13 +9,8 @@ namespace SedentaryReminder.util
 {
     public class IniUtil
     {
-        private readonly string path = $"C:\\Users\\{System.Environment.UserName}\\AppData\\Local\\SedentaryReminder\\";
+        private readonly string path = "";
         private readonly string fileName = "";
-
-        public IniUtil(string fileName)
-        {
-            this.fileName = fileName;
-        }
 
         public IniUtil(string path, string fileName)
         {

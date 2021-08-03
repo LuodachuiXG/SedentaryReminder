@@ -48,6 +48,7 @@ namespace SedentaryReminder.pages
             this.rb_minimize.TabStop = true;
             this.rb_minimize.Text = "最小化程序到系统托盘";
             this.rb_minimize.UseVisualStyleBackColor = true;
+            this.rb_minimize.CheckedChanged += new System.EventHandler(this.rb_minimize_CheckedChanged);
             // 
             // rb_finishProgram
             // 
@@ -59,6 +60,7 @@ namespace SedentaryReminder.pages
             this.rb_finishProgram.TabIndex = 1;
             this.rb_finishProgram.Text = "结束程序运行";
             this.rb_finishProgram.UseVisualStyleBackColor = true;
+            this.rb_finishProgram.CheckedChanged += new System.EventHandler(this.rb_finishProgram_CheckedChanged);
             // 
             // cb_remeberMyChoice
             // 
@@ -70,6 +72,7 @@ namespace SedentaryReminder.pages
             this.cb_remeberMyChoice.TabIndex = 2;
             this.cb_remeberMyChoice.Text = "记住我的选择";
             this.cb_remeberMyChoice.UseVisualStyleBackColor = true;
+            this.cb_remeberMyChoice.CheckedChanged += new System.EventHandler(this.cb_remeberMyChoice_CheckedChanged);
             // 
             // btn_ok
             // 

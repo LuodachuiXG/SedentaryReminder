@@ -32,6 +32,7 @@ namespace SedentaryReminder
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage_generalSettings = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.cBox_general_autoStarting = new System.Windows.Forms.CheckBox();
             this.cBox_general_selfStarting = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -41,36 +42,37 @@ namespace SedentaryReminder
             this.rBtn_general_minimize = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage_reminderSettings = new System.Windows.Forms.TabPage();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.cBox_reminder_windowsShadow = new System.Windows.Forms.CheckBox();
+            this.cBox_reminder_displayKeyAndTimeTips = new System.Windows.Forms.CheckBox();
+            this.cBox_reminder_displayTips = new System.Windows.Forms.CheckBox();
+            this.cbBox_reminder_textColor = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.btn_reminder_selectBackground = new System.Windows.Forms.Button();
+            this.btn_reminder_selectMusic = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.tb_reminder_reminderText = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.cbBox_reminder_activityKey = new System.Windows.Forms.ComboBox();
+            this.cbBox_reminder_activityFuncKey = new System.Windows.Forms.ComboBox();
+            this.cbBox_reminder_ignoreKey = new System.Windows.Forms.ComboBox();
+            this.cbBox_reminder_ignoreFuncKey = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btn_finish = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.cbBox_reminder_ignoreFuncKey = new System.Windows.Forms.ComboBox();
-            this.cbBox_reminder_ignoreKey = new System.Windows.Forms.ComboBox();
-            this.cbBox_reminder_activityKey = new System.Windows.Forms.ComboBox();
-            this.cbBox_reminder_activityFuncKey = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.tb_reminder_reminderText = new System.Windows.Forms.TextBox();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.btn_reminder_selectMusic = new System.Windows.Forms.Button();
-            this.btn_reminder_selectBackground = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
-            this.cbBox_reminder_textColor = new System.Windows.Forms.ComboBox();
-            this.cb_reminder_displayTips = new System.Windows.Forms.CheckBox();
-            this.cb_reminder_displayKeyAndTimeTips = new System.Windows.Forms.CheckBox();
-            this.cb_reminder_windowsShadow = new System.Windows.Forms.CheckBox();
             this.tabControl1.SuspendLayout();
             this.tabPage_generalSettings.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.tabPage_reminderSettings.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -97,6 +99,7 @@ namespace SedentaryReminder
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.pictureBox1);
             this.groupBox2.Controls.Add(this.cBox_general_autoStarting);
             this.groupBox2.Controls.Add(this.cBox_general_selfStarting);
             this.groupBox2.Controls.Add(this.label2);
@@ -107,6 +110,17 @@ namespace SedentaryReminder
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "功能设置";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox1.Image = global::SedentaryReminder.Properties.Resources.admin;
+            this.pictureBox1.Location = new System.Drawing.Point(290, 35);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(22, 20);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            // 
             // cBox_general_autoStarting
             // 
             this.cBox_general_autoStarting.AutoSize = true;
@@ -116,16 +130,19 @@ namespace SedentaryReminder
             this.cBox_general_autoStarting.TabIndex = 4;
             this.cBox_general_autoStarting.Text = "自动运行久坐提醒";
             this.cBox_general_autoStarting.UseVisualStyleBackColor = true;
+            this.cBox_general_autoStarting.CheckedChanged += new System.EventHandler(this.cBox_general_autoStarting_CheckedChanged);
             // 
             // cBox_general_selfStarting
             // 
             this.cBox_general_selfStarting.AutoSize = true;
+            this.cBox_general_selfStarting.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.cBox_general_selfStarting.Location = new System.Drawing.Point(195, 39);
             this.cBox_general_selfStarting.Name = "cBox_general_selfStarting";
             this.cBox_general_selfStarting.Size = new System.Drawing.Size(96, 16);
             this.cBox_general_selfStarting.TabIndex = 3;
             this.cBox_general_selfStarting.Text = "跟随系统启动";
             this.cBox_general_selfStarting.UseVisualStyleBackColor = true;
+            this.cBox_general_selfStarting.CheckedChanged += new System.EventHandler(this.cBox_general_selfStarting_CheckedChanged);
             // 
             // label2
             // 
@@ -158,6 +175,7 @@ namespace SedentaryReminder
             this.cBox_general_RememberMyChoice.TabIndex = 3;
             this.cBox_general_RememberMyChoice.Text = "记住我的选择";
             this.cBox_general_RememberMyChoice.UseVisualStyleBackColor = true;
+            this.cBox_general_RememberMyChoice.CheckedChanged += new System.EventHandler(this.cBox_general_RememberMyChoice_CheckedChanged);
             // 
             // rBtn_general_finishProgram
             // 
@@ -169,6 +187,7 @@ namespace SedentaryReminder
             this.rBtn_general_finishProgram.TabStop = true;
             this.rBtn_general_finishProgram.Text = "结束程序运行";
             this.rBtn_general_finishProgram.UseVisualStyleBackColor = true;
+            this.rBtn_general_finishProgram.CheckedChanged += new System.EventHandler(this.rBtn_general_finishProgram_CheckedChanged);
             // 
             // rBtn_general_minimize
             // 
@@ -181,6 +200,7 @@ namespace SedentaryReminder
             this.rBtn_general_minimize.TabStop = true;
             this.rBtn_general_minimize.Text = "最小化程序置系统托盘";
             this.rBtn_general_minimize.UseVisualStyleBackColor = true;
+            this.rBtn_general_minimize.CheckedChanged += new System.EventHandler(this.rBtn_general_minimize_CheckedChanged);
             // 
             // label1
             // 
@@ -204,6 +224,144 @@ namespace SedentaryReminder
             this.tabPage_reminderSettings.Text = "提醒设置";
             this.tabPage_reminderSettings.UseVisualStyleBackColor = true;
             // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.cBox_reminder_windowsShadow);
+            this.groupBox5.Controls.Add(this.cBox_reminder_displayKeyAndTimeTips);
+            this.groupBox5.Controls.Add(this.cBox_reminder_displayTips);
+            this.groupBox5.Controls.Add(this.cbBox_reminder_textColor);
+            this.groupBox5.Controls.Add(this.label8);
+            this.groupBox5.Controls.Add(this.btn_reminder_selectBackground);
+            this.groupBox5.Controls.Add(this.btn_reminder_selectMusic);
+            this.groupBox5.Controls.Add(this.label7);
+            this.groupBox5.Location = new System.Drawing.Point(6, 251);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(357, 164);
+            this.groupBox5.TabIndex = 4;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "功能设置";
+            // 
+            // cBox_reminder_windowsShadow
+            // 
+            this.cBox_reminder_windowsShadow.AutoSize = true;
+            this.cBox_reminder_windowsShadow.Checked = true;
+            this.cBox_reminder_windowsShadow.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cBox_reminder_windowsShadow.Location = new System.Drawing.Point(202, 127);
+            this.cBox_reminder_windowsShadow.Name = "cBox_reminder_windowsShadow";
+            this.cBox_reminder_windowsShadow.Size = new System.Drawing.Size(72, 16);
+            this.cBox_reminder_windowsShadow.TabIndex = 11;
+            this.cBox_reminder_windowsShadow.Text = "窗口阴影";
+            this.cBox_reminder_windowsShadow.UseVisualStyleBackColor = true;
+            this.cBox_reminder_windowsShadow.CheckedChanged += new System.EventHandler(this.cBox_reminder_windowsShadow_CheckedChanged);
+            // 
+            // cBox_reminder_displayKeyAndTimeTips
+            // 
+            this.cBox_reminder_displayKeyAndTimeTips.AutoSize = true;
+            this.cBox_reminder_displayKeyAndTimeTips.Checked = true;
+            this.cBox_reminder_displayKeyAndTimeTips.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cBox_reminder_displayKeyAndTimeTips.Location = new System.Drawing.Point(202, 88);
+            this.cBox_reminder_displayKeyAndTimeTips.Name = "cBox_reminder_displayKeyAndTimeTips";
+            this.cBox_reminder_displayKeyAndTimeTips.Size = new System.Drawing.Size(144, 16);
+            this.cBox_reminder_displayKeyAndTimeTips.TabIndex = 10;
+            this.cBox_reminder_displayKeyAndTimeTips.Text = "快捷键和活动计时提示";
+            this.cBox_reminder_displayKeyAndTimeTips.UseVisualStyleBackColor = true;
+            this.cBox_reminder_displayKeyAndTimeTips.CheckedChanged += new System.EventHandler(this.cBox_reminder_displayKeyAndTimeTips_CheckedChanged);
+            // 
+            // cBox_reminder_displayTips
+            // 
+            this.cBox_reminder_displayTips.AutoSize = true;
+            this.cBox_reminder_displayTips.Checked = true;
+            this.cBox_reminder_displayTips.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cBox_reminder_displayTips.Location = new System.Drawing.Point(202, 52);
+            this.cBox_reminder_displayTips.Name = "cBox_reminder_displayTips";
+            this.cBox_reminder_displayTips.Size = new System.Drawing.Size(72, 16);
+            this.cBox_reminder_displayTips.TabIndex = 9;
+            this.cBox_reminder_displayTips.Text = "提示文本";
+            this.cBox_reminder_displayTips.UseVisualStyleBackColor = true;
+            this.cBox_reminder_displayTips.CheckedChanged += new System.EventHandler(this.cBox_reminder_displayTips_CheckedChanged);
+            // 
+            // cbBox_reminder_textColor
+            // 
+            this.cbBox_reminder_textColor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbBox_reminder_textColor.FormattingEnabled = true;
+            this.cbBox_reminder_textColor.Items.AddRange(new object[] {
+            "深色",
+            "浅色"});
+            this.cbBox_reminder_textColor.Location = new System.Drawing.Point(116, 127);
+            this.cbBox_reminder_textColor.Name = "cbBox_reminder_textColor";
+            this.cbBox_reminder_textColor.Size = new System.Drawing.Size(51, 20);
+            this.cbBox_reminder_textColor.TabIndex = 8;
+            this.cbBox_reminder_textColor.SelectedIndexChanged += new System.EventHandler(this.cbBox_reminder_textColor_SelectedIndexChanged);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(9, 132);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(113, 12);
+            this.label8.TabIndex = 4;
+            this.label8.Text = "提示窗口文字颜色：";
+            // 
+            // btn_reminder_selectBackground
+            // 
+            this.btn_reminder_selectBackground.Location = new System.Drawing.Point(8, 88);
+            this.btn_reminder_selectBackground.Name = "btn_reminder_selectBackground";
+            this.btn_reminder_selectBackground.Size = new System.Drawing.Size(159, 24);
+            this.btn_reminder_selectBackground.TabIndex = 3;
+            this.btn_reminder_selectBackground.Text = "背景图 320*150（未设置）";
+            this.btn_reminder_selectBackground.UseVisualStyleBackColor = true;
+            this.btn_reminder_selectBackground.Click += new System.EventHandler(this.btn_reminder_selectBackground_Click);
+            // 
+            // btn_reminder_selectMusic
+            // 
+            this.btn_reminder_selectMusic.Location = new System.Drawing.Point(8, 52);
+            this.btn_reminder_selectMusic.Name = "btn_reminder_selectMusic";
+            this.btn_reminder_selectMusic.Size = new System.Drawing.Size(159, 24);
+            this.btn_reminder_selectMusic.TabIndex = 2;
+            this.btn_reminder_selectMusic.Text = "提醒音乐（未设置）";
+            this.btn_reminder_selectMusic.UseVisualStyleBackColor = true;
+            this.btn_reminder_selectMusic.Click += new System.EventHandler(this.btn_reminder_selectMusic_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(5, 27);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(173, 12);
+            this.label7.TabIndex = 1;
+            this.label7.Text = "久坐提醒页面上一些其他功能。";
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.tb_reminder_reminderText);
+            this.groupBox4.Controls.Add(this.label10);
+            this.groupBox4.Location = new System.Drawing.Point(6, 144);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(357, 100);
+            this.groupBox4.TabIndex = 3;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "提示文本";
+            // 
+            // tb_reminder_reminderText
+            // 
+            this.tb_reminder_reminderText.Location = new System.Drawing.Point(7, 47);
+            this.tb_reminder_reminderText.MaxLength = 100;
+            this.tb_reminder_reminderText.Multiline = true;
+            this.tb_reminder_reminderText.Name = "tb_reminder_reminderText";
+            this.tb_reminder_reminderText.Size = new System.Drawing.Size(343, 42);
+            this.tb_reminder_reminderText.TabIndex = 1;
+            this.tb_reminder_reminderText.Text = "活动时间到了，起身活动一下并向远方眺望放松一下眼部压力。";
+            this.tb_reminder_reminderText.TextChanged += new System.EventHandler(this.tb_reminder_reminderText_TextChanged);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(6, 23);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(161, 12);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "久坐提醒页面上的提示文本。";
+            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.label6);
@@ -221,118 +379,14 @@ namespace SedentaryReminder
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "热键设置";
             // 
-            // label4
+            // label6
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(22, 56);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(89, 12);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "忽略这次提醒：";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 28);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(161, 12);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "久坐提醒页面的一些快捷键。";
-            // 
-            // btn_finish
-            // 
-            this.btn_finish.Location = new System.Drawing.Point(294, 464);
-            this.btn_finish.Name = "btn_finish";
-            this.btn_finish.Size = new System.Drawing.Size(89, 30);
-            this.btn_finish.TabIndex = 1;
-            this.btn_finish.Text = "确定";
-            this.btn_finish.UseVisualStyleBackColor = true;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(16, 92);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(95, 12);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "活动/结束活动：";
-            // 
-            // cbBox_reminder_ignoreFuncKey
-            // 
-            this.cbBox_reminder_ignoreFuncKey.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbBox_reminder_ignoreFuncKey.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.cbBox_reminder_ignoreFuncKey.FormattingEnabled = true;
-            this.cbBox_reminder_ignoreFuncKey.Items.AddRange(new object[] {
-            "无功能键",
-            "Ctrl",
-            "Shift",
-            "Alt",
-            "Ctrl+Shift",
-            "Alt+Shift",
-            "Ctrl+Alt",
-            "Ctrl+Shift+Alt"});
-            this.cbBox_reminder_ignoreFuncKey.Location = new System.Drawing.Point(116, 52);
-            this.cbBox_reminder_ignoreFuncKey.Name = "cbBox_reminder_ignoreFuncKey";
-            this.cbBox_reminder_ignoreFuncKey.Size = new System.Drawing.Size(120, 20);
-            this.cbBox_reminder_ignoreFuncKey.TabIndex = 4;
-            // 
-            // cbBox_reminder_ignoreKey
-            // 
-            this.cbBox_reminder_ignoreKey.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbBox_reminder_ignoreKey.FormattingEnabled = true;
-            this.cbBox_reminder_ignoreKey.Items.AddRange(new object[] {
-            "F1",
-            "F2",
-            "F3",
-            "F4",
-            "F5",
-            "F6",
-            "F7",
-            "F8",
-            "F9",
-            "F10",
-            "F11",
-            "F12",
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "0",
-            "A",
-            "B",
-            "C",
-            "D",
-            "E",
-            "F",
-            "G",
-            "H",
-            "I",
-            "J",
-            "K",
-            "L",
-            "M",
-            "N",
-            "O",
-            "P",
-            "Q",
-            "R",
-            "S",
-            "T",
-            "U",
-            "V",
-            "W",
-            "X",
-            "Y",
-            "Z"});
-            this.cbBox_reminder_ignoreKey.Location = new System.Drawing.Point(252, 52);
-            this.cbBox_reminder_ignoreKey.Name = "cbBox_reminder_ignoreKey";
-            this.cbBox_reminder_ignoreKey.Size = new System.Drawing.Size(79, 20);
-            this.cbBox_reminder_ignoreKey.TabIndex = 5;
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(238, 56);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(11, 48);
+            this.label6.TabIndex = 8;
+            this.label6.Text = "+\r\n\r\n\r\n+";
             // 
             // cbBox_reminder_activityKey
             // 
@@ -391,6 +445,7 @@ namespace SedentaryReminder
             this.cbBox_reminder_activityKey.Name = "cbBox_reminder_activityKey";
             this.cbBox_reminder_activityKey.Size = new System.Drawing.Size(79, 20);
             this.cbBox_reminder_activityKey.TabIndex = 7;
+            this.cbBox_reminder_activityKey.SelectedIndexChanged += new System.EventHandler(this.cbBox_reminder_activityKey_SelectedIndexChanged);
             // 
             // cbBox_reminder_activityFuncKey
             // 
@@ -409,142 +464,127 @@ namespace SedentaryReminder
             this.cbBox_reminder_activityFuncKey.Name = "cbBox_reminder_activityFuncKey";
             this.cbBox_reminder_activityFuncKey.Size = new System.Drawing.Size(120, 20);
             this.cbBox_reminder_activityFuncKey.TabIndex = 6;
+            this.cbBox_reminder_activityFuncKey.SelectedIndexChanged += new System.EventHandler(this.cbBox_reminder_activityFuncKey_SelectedIndexChanged);
             // 
-            // label6
+            // cbBox_reminder_ignoreKey
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(238, 56);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(11, 48);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "+\r\n\r\n\r\n+";
+            this.cbBox_reminder_ignoreKey.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbBox_reminder_ignoreKey.FormattingEnabled = true;
+            this.cbBox_reminder_ignoreKey.Items.AddRange(new object[] {
+            "F1",
+            "F2",
+            "F3",
+            "F4",
+            "F5",
+            "F6",
+            "F7",
+            "F8",
+            "F9",
+            "F10",
+            "F11",
+            "F12",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "0",
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G",
+            "H",
+            "I",
+            "J",
+            "K",
+            "L",
+            "M",
+            "N",
+            "O",
+            "P",
+            "Q",
+            "R",
+            "S",
+            "T",
+            "U",
+            "V",
+            "W",
+            "X",
+            "Y",
+            "Z"});
+            this.cbBox_reminder_ignoreKey.Location = new System.Drawing.Point(252, 52);
+            this.cbBox_reminder_ignoreKey.Name = "cbBox_reminder_ignoreKey";
+            this.cbBox_reminder_ignoreKey.Size = new System.Drawing.Size(79, 20);
+            this.cbBox_reminder_ignoreKey.TabIndex = 5;
+            this.cbBox_reminder_ignoreKey.SelectedIndexChanged += new System.EventHandler(this.cbBox_reminder_ignoreKey_SelectedIndexChanged);
             // 
-            // groupBox4
+            // cbBox_reminder_ignoreFuncKey
             // 
-            this.groupBox4.Controls.Add(this.tb_reminder_reminderText);
-            this.groupBox4.Controls.Add(this.label10);
-            this.groupBox4.Location = new System.Drawing.Point(6, 144);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(357, 100);
-            this.groupBox4.TabIndex = 3;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "提示文本";
+            this.cbBox_reminder_ignoreFuncKey.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbBox_reminder_ignoreFuncKey.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.cbBox_reminder_ignoreFuncKey.FormattingEnabled = true;
+            this.cbBox_reminder_ignoreFuncKey.Items.AddRange(new object[] {
+            "无功能键",
+            "Ctrl",
+            "Shift",
+            "Alt",
+            "Ctrl+Shift",
+            "Alt+Shift",
+            "Ctrl+Alt",
+            "Ctrl+Shift+Alt"});
+            this.cbBox_reminder_ignoreFuncKey.Location = new System.Drawing.Point(116, 52);
+            this.cbBox_reminder_ignoreFuncKey.Name = "cbBox_reminder_ignoreFuncKey";
+            this.cbBox_reminder_ignoreFuncKey.Size = new System.Drawing.Size(120, 20);
+            this.cbBox_reminder_ignoreFuncKey.TabIndex = 4;
+            this.cbBox_reminder_ignoreFuncKey.SelectedIndexChanged += new System.EventHandler(this.cbBox_reminder_ignoreFuncKey_SelectedIndexChanged);
             // 
-            // label10
+            // label5
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(6, 23);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(161, 12);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "久坐提醒页面上的提示文本。";
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(16, 92);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(95, 12);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "活动/结束活动：";
             // 
-            // tb_reminder_reminderText
+            // label4
             // 
-            this.tb_reminder_reminderText.Location = new System.Drawing.Point(7, 47);
-            this.tb_reminder_reminderText.Multiline = true;
-            this.tb_reminder_reminderText.Name = "tb_reminder_reminderText";
-            this.tb_reminder_reminderText.Size = new System.Drawing.Size(343, 42);
-            this.tb_reminder_reminderText.TabIndex = 1;
-            this.tb_reminder_reminderText.Text = "活动时间到了，起身活动一下并向远方眺望放松一下眼部压力。";
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(22, 56);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(89, 12);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "忽略这次提醒：";
             // 
-            // groupBox5
+            // label3
             // 
-            this.groupBox5.Controls.Add(this.cb_reminder_windowsShadow);
-            this.groupBox5.Controls.Add(this.cb_reminder_displayKeyAndTimeTips);
-            this.groupBox5.Controls.Add(this.cb_reminder_displayTips);
-            this.groupBox5.Controls.Add(this.cbBox_reminder_textColor);
-            this.groupBox5.Controls.Add(this.label8);
-            this.groupBox5.Controls.Add(this.btn_reminder_selectBackground);
-            this.groupBox5.Controls.Add(this.btn_reminder_selectMusic);
-            this.groupBox5.Controls.Add(this.label7);
-            this.groupBox5.Location = new System.Drawing.Point(6, 251);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(357, 164);
-            this.groupBox5.TabIndex = 4;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "功能设置";
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 28);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(161, 12);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "久坐提醒页面的一些快捷键。";
             // 
-            // label7
+            // btn_finish
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(5, 27);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(173, 12);
-            this.label7.TabIndex = 1;
-            this.label7.Text = "久坐提醒页面上一些其他功能。";
-            // 
-            // btn_reminder_selectMusic
-            // 
-            this.btn_reminder_selectMusic.Location = new System.Drawing.Point(8, 52);
-            this.btn_reminder_selectMusic.Name = "btn_reminder_selectMusic";
-            this.btn_reminder_selectMusic.Size = new System.Drawing.Size(159, 24);
-            this.btn_reminder_selectMusic.TabIndex = 2;
-            this.btn_reminder_selectMusic.Text = "提醒音乐（未设置）";
-            this.btn_reminder_selectMusic.UseVisualStyleBackColor = true;
-            // 
-            // btn_reminder_selectBackground
-            // 
-            this.btn_reminder_selectBackground.Location = new System.Drawing.Point(8, 88);
-            this.btn_reminder_selectBackground.Name = "btn_reminder_selectBackground";
-            this.btn_reminder_selectBackground.Size = new System.Drawing.Size(159, 24);
-            this.btn_reminder_selectBackground.TabIndex = 3;
-            this.btn_reminder_selectBackground.Text = "背景图 320*150（未设置）";
-            this.btn_reminder_selectBackground.UseVisualStyleBackColor = true;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(9, 132);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(113, 12);
-            this.label8.TabIndex = 4;
-            this.label8.Text = "提示窗口文字颜色：";
-            // 
-            // cbBox_reminder_textColor
-            // 
-            this.cbBox_reminder_textColor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbBox_reminder_textColor.FormattingEnabled = true;
-            this.cbBox_reminder_textColor.Items.AddRange(new object[] {
-            "深色",
-            "浅色"});
-            this.cbBox_reminder_textColor.Location = new System.Drawing.Point(116, 127);
-            this.cbBox_reminder_textColor.Name = "cbBox_reminder_textColor";
-            this.cbBox_reminder_textColor.Size = new System.Drawing.Size(51, 20);
-            this.cbBox_reminder_textColor.TabIndex = 8;
-            // 
-            // cb_reminder_displayTips
-            // 
-            this.cb_reminder_displayTips.AutoSize = true;
-            this.cb_reminder_displayTips.Location = new System.Drawing.Point(202, 52);
-            this.cb_reminder_displayTips.Name = "cb_reminder_displayTips";
-            this.cb_reminder_displayTips.Size = new System.Drawing.Size(72, 16);
-            this.cb_reminder_displayTips.TabIndex = 9;
-            this.cb_reminder_displayTips.Text = "提示文本";
-            this.cb_reminder_displayTips.UseVisualStyleBackColor = true;
-            // 
-            // cb_reminder_displayKeyAndTimeTips
-            // 
-            this.cb_reminder_displayKeyAndTimeTips.AutoSize = true;
-            this.cb_reminder_displayKeyAndTimeTips.Location = new System.Drawing.Point(202, 88);
-            this.cb_reminder_displayKeyAndTimeTips.Name = "cb_reminder_displayKeyAndTimeTips";
-            this.cb_reminder_displayKeyAndTimeTips.Size = new System.Drawing.Size(144, 16);
-            this.cb_reminder_displayKeyAndTimeTips.TabIndex = 10;
-            this.cb_reminder_displayKeyAndTimeTips.Text = "快捷键和活动计时提示";
-            this.cb_reminder_displayKeyAndTimeTips.UseVisualStyleBackColor = true;
-            // 
-            // cb_reminder_windowsShadow
-            // 
-            this.cb_reminder_windowsShadow.AutoSize = true;
-            this.cb_reminder_windowsShadow.Location = new System.Drawing.Point(202, 127);
-            this.cb_reminder_windowsShadow.Name = "cb_reminder_windowsShadow";
-            this.cb_reminder_windowsShadow.Size = new System.Drawing.Size(72, 16);
-            this.cb_reminder_windowsShadow.TabIndex = 11;
-            this.cb_reminder_windowsShadow.Text = "窗口阴影";
-            this.cb_reminder_windowsShadow.UseVisualStyleBackColor = true;
+            this.btn_finish.Location = new System.Drawing.Point(294, 464);
+            this.btn_finish.Name = "btn_finish";
+            this.btn_finish.Size = new System.Drawing.Size(89, 30);
+            this.btn_finish.TabIndex = 1;
+            this.btn_finish.Text = "确定";
+            this.btn_finish.UseVisualStyleBackColor = true;
+            this.btn_finish.Click += new System.EventHandler(this.btn_finish_Click);
             // 
             // FormSettings
             // 
+            this.AcceptButton = this.btn_finish;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(396, 506);
@@ -560,15 +600,16 @@ namespace SedentaryReminder
             this.tabPage_generalSettings.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.tabPage_reminderSettings.ResumeLayout(false);
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -606,8 +647,9 @@ namespace SedentaryReminder
         private System.Windows.Forms.Button btn_reminder_selectMusic;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox cbBox_reminder_textColor;
-        private System.Windows.Forms.CheckBox cb_reminder_displayTips;
-        private System.Windows.Forms.CheckBox cb_reminder_displayKeyAndTimeTips;
-        private System.Windows.Forms.CheckBox cb_reminder_windowsShadow;
+        private System.Windows.Forms.CheckBox cBox_reminder_displayTips;
+        private System.Windows.Forms.CheckBox cBox_reminder_displayKeyAndTimeTips;
+        private System.Windows.Forms.CheckBox cBox_reminder_windowsShadow;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

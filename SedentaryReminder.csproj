@@ -121,6 +121,7 @@
     <Compile Include="Settings.cs" />
     <Compile Include="util\HotKeyValue.cs" />
     <Compile Include="util\IniUtil.cs" />
+    <Compile Include="util\Tool.cs" />
     <EmbeddedResource Include="pages\FormAbout.resx">
       <DependentUpon>FormAbout.cs</DependentUpon>
     </EmbeddedResource>
@@ -181,6 +182,8 @@
   <ItemGroup>
     <None Include="Resources\jiuzuo.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\admin.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

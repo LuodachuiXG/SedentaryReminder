@@ -9,8 +9,11 @@ namespace SedentaryReminder
 {
     class Common
     {
-        public static readonly string DEFAULT_REMINDER_TIPS = "Alt+Shift+I：忽视本次活动提醒，重新进行计时\r\n\r\nAlt+SHift+G：起身活动/活动结束";
-        public static readonly string DEFAULT_SEDENTARY_REMINDER_TIPS = "活动时间到了，起身活动一下并向远方眺望放松一下眼部压力。";
+        // 程序数据存放地址
+        public static readonly string PATH = $"C:\\Users\\{Environment.UserName}\\AppData\\Local\\SedentaryReminder\\";
+        
+        public static readonly string DEFAULT_KEY_REMINDER_TEXT = "Alt+Shift+I：忽视本次活动提醒，重新进行计时\r\n\r\nAlt+SHift+G：起身活动/活动结束";
+        public static readonly string DEFAULT_SEDENTARY_REMINDER_TEXT = "活动时间到了，起身活动一下并向远方眺望放松一下眼部压力。";
 
         // 配置文件节点
         public static readonly string NODE_MAIN = "main";
@@ -44,7 +47,7 @@ namespace SedentaryReminder
         public static readonly string REMINDER_WINDOW_SHADOW = "windowsShadow";
 
         // 全局设置配置文件IniUtil类
-        public static readonly IniUtil iniSetting = new IniUtil("setting.ini");
+        public static readonly IniUtil iniSetting = new IniUtil(PATH, "setting.ini");
 
     }
 }

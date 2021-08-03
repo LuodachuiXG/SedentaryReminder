@@ -1,0 +1,13 @@
+D:\Project\winform_project\SedentaryReminder\bin\x64\Release\SedentaryReminder.exe.config
+D:\Project\winform_project\SedentaryReminder\bin\x64\Release\SedentaryReminder.exe
+D:\Project\winform_project\SedentaryReminder\bin\x64\Release\SedentaryReminder.pdb
+D:\Project\winform_project\SedentaryReminder\obj\x64\Release\SedentaryReminder.csproj.AssemblyReference.cache
+D:\Project\winform_project\SedentaryReminder\obj\x64\Release\SedentaryReminder.FormAbout.resources
+D:\Project\winform_project\SedentaryReminder\obj\x64\Release\SedentaryReminder.pages.FormCloseOrMinimize.resources
+D:\Project\winform_project\SedentaryReminder\obj\x64\Release\SedentaryReminder.FormSettings.resources
+D:\Project\winform_project\SedentaryReminder\obj\x64\Release\SedentaryReminder.FormStart.resources
+D:\Project\winform_project\SedentaryReminder\obj\x64\Release\SedentaryReminder.Properties.Resources.resources
+D:\Project\winform_project\SedentaryReminder\obj\x64\Release\SedentaryReminder.csproj.GenerateResource.cache
+D:\Project\winform_project\SedentaryReminder\obj\x64\Release\SedentaryReminder.csproj.CoreCompileInputs.cache
+D:\Project\winform_project\SedentaryReminder\obj\x64\Release\SedentaryReminder.exe
+D:\Project\winform_project\SedentaryReminder\obj\x64\Release\SedentaryReminder.pdb
