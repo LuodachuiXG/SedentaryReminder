@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="26d1b937-bf92-4e9d-94e2-9fd8568fdf7f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.vs/SedentaryReminder/v16/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/SedentaryReminder/v16/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FormStart.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FormStart.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Properties/AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Properties/AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SedentaryReminder.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/SedentaryReminder.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SedentaryReminder.csproj.user" beforeDir="false" afterPath="$PROJECT_DIR$/SedentaryReminder.csproj.user" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/IniUtil.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/SedentaryReminder.exe" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/SedentaryReminder.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/SedentaryReminder.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/SedentaryReminder.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/x64/Release/SedentaryReminder.exe" beforeDir="false" afterPath="$PROJECT_DIR$/bin/x64/Release/SedentaryReminder.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/x64/Release/SedentaryReminder.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/x64/Release/SedentaryReminder.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/SedentaryReminder.Properties.Resources.resources" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/SedentaryReminder.Properties.Resources.resources" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/SedentaryReminder.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/SedentaryReminder.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/SedentaryReminder.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/SedentaryReminder.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/SedentaryReminder.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/SedentaryReminder.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/SedentaryReminder.csproj.GenerateResource.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/SedentaryReminder.csproj.GenerateResource.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/SedentaryReminder.exe" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/SedentaryReminder.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/SedentaryReminder.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/SedentaryReminder.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/TempPE/Properties.Resources.Designer.cs.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/TempPE/Properties.Resources.Designer.cs.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/x64/Debug/DesignTimeResolveAssemblyReferences.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/x64/Debug/DesignTimeResolveAssemblyReferences.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/x64/Debug/DesignTimeResolveAssemblyReferencesInput.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/x64/Debug/DesignTimeResolveAssemblyReferencesInput.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/x64/Debug/SedentaryReminder.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/x64/Debug/SedentaryReminder.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/x64/Release/SedentaryReminder.Properties.Resources.resources" beforeDir="false" afterPath="$PROJECT_DIR$/obj/x64/Release/SedentaryReminder.Properties.Resources.resources" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/x64/Release/SedentaryReminder.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/x64/Release/SedentaryReminder.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/x64/Release/SedentaryReminder.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/x64/Release/SedentaryReminder.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/x64/Release/SedentaryReminder.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/obj/x64/Release/SedentaryReminder.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/x64/Release/SedentaryReminder.exe" beforeDir="false" afterPath="$PROJECT_DIR$/obj/x64/Release/SedentaryReminder.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/x64/Release/SedentaryReminder.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/x64/Release/SedentaryReminder.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages.config" beforeDir="false" afterPath="$PROJECT_DIR$/packages.config" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1wGGuDxAQasbk1dM42Qqs4PPJSo" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="26d1b937-bf92-4e9d-94e2-9fd8568fdf7f" name="Default Changelist" comment="" />
+      <created>1628077735685</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1628077735685</updated>
+      <workItem from="1628077738514" duration="16000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

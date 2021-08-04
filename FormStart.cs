@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -63,6 +64,12 @@ namespace SedentaryReminder
         /// </summary>
         private void init()
         {
+            // 判断文件夹是否存在，否则创建
+            if (Directory.Exists(Common.PATH) == false)//如果不存在就创建file文件夹
+            {
+                Directory.CreateDirectory(Common.PATH);
+            }
+              
             // 判断是否是第一次运行软件
             if (ini.ReadString(Common.NODE_MAIN, Common.MAIN_FIRST_RUN, "N").Equals("N"))
             {

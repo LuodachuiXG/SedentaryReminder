@@ -11,3 +11,4 @@ D:\Project\winform_project\SedentaryReminder\obj\x64\Release\SedentaryReminder.c
 D:\Project\winform_project\SedentaryReminder\obj\x64\Release\SedentaryReminder.csproj.CoreCompileInputs.cache
 D:\Project\winform_project\SedentaryReminder\obj\x64\Release\SedentaryReminder.exe
 D:\Project\winform_project\SedentaryReminder\obj\x64\Release\SedentaryReminder.pdb
+D:\Project\winform_project\SedentaryReminder\obj\x64\Release\SedentaryReminder.pages.FormReminder.resources
