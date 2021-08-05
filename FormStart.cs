@@ -70,17 +70,6 @@ namespace SedentaryReminder
                 Directory.CreateDirectory(Common.PATH);
             }
               
-            // 判断是否是第一次运行软件
-            if (ini.ReadString(Common.NODE_MAIN, Common.MAIN_FIRST_RUN, "N").Equals("N"))
-            {
-                // 第一次运行
-                ini.WriteString(Common.NODE_MAIN, Common.MAIN_FIRST_RUN, "Y");
-                string str = "欢迎使用久坐护眼提醒！\n久坐危害多多，建议启动软件开机自启和启动后自动运行久坐提醒功能，" +
-                    "时刻提醒久坐。\n点击确定立即进行设置，或者进入软件后点击功能->设置进行设置。";
-                if (MessageBox.Show(str, "温馨提示", MessageBoxButtons.OKCancel) == DialogResult.OK)
-                    new FormSettings().ShowDialog();
-            }
-
             // 读取FormStart上显示数据
             string sedentartReminderTime = ini.ReadString(Common.NODE_MAIN, Common.MAIN_REMINDER_TIME, "60");
             string stopReminderTime = ini.ReadString(Common.NODE_MAIN, Common.MAIN_STOP_REMINDER_TIME, "5");
@@ -127,6 +116,18 @@ namespace SedentaryReminder
                 tabControl1.SelectedIndex = 1;
                 this.ShowInTaskbar = false;
                 this.Hide();
+            }
+
+
+            // 判断是否是第一次运行软件
+            if (ini.ReadString(Common.NODE_MAIN, Common.MAIN_FIRST_RUN, "N").Equals("N"))
+            {
+                // 第一次运行
+                ini.WriteString(Common.NODE_MAIN, Common.MAIN_FIRST_RUN, "Y");
+                string str = "欢迎使用久坐护眼提醒！\n久坐危害多多，建议启动软件开机自启和启动后自动运行久坐提醒功能，" +
+                    "时刻提醒久坐。\n点击确定立即进行设置，或者进入软件后点击功能->设置进行设置。";
+                if (MessageBox.Show(str, "温馨提示", MessageBoxButtons.OKCancel) == DialogResult.OK)
+                    new FormSettings().ShowDialog();
             }
         }
 
